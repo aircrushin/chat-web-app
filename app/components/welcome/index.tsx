@@ -332,7 +332,7 @@ const Welcome: FC<IWelcomeProps> = ({
               : <div>
               </div>}
             <a className='flex items-center pr-3 space-x-3' href="https://www.safebition.com/" target="_blank">
-              <span className='uppercase'>safebition ai</span>
+              <span className='uppercase'>Safebition AI</span>
               <FootLogo />
             </a>
           </div>
