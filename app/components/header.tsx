@@ -10,7 +10,7 @@ export type IHeaderProps = {
 const Header: FC<IHeaderProps> = () => {
   return (
     <div className="shrink-0 flex items-center justify-between h-12 px-3 bg-gray-50">
-      <img src='logo.png' alt='logo' className='h-10 w-auto'></img>
+      <img src='logo.png' alt='logo' className='h-full w-auto'></img>
     </div>
   )
 }

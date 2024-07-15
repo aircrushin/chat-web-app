@@ -3,9 +3,12 @@ import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   ChatBubbleOvalLeftEllipsisIcon,
+  PaperAirplaneIcon,
   PencilSquareIcon,
 } from '@heroicons/react/24/outline'
+
 import { ChatBubbleOvalLeftEllipsisIcon as ChatBubbleOvalLeftEllipsisSolidIcon } from '@heroicons/react/24/solid'
+import Link from 'next/link'
 import Button from '@/app/components/base/button'
 // import Card from './card'
 import type { ConversationItem } from '@/types/app'
@@ -74,18 +77,21 @@ const Sidebar: FC<ISidebarProps> = ({
           )
         })}
       </nav>
-      <a
-        className="group flex items-center font-semibold text-center rounded-md px-4 py-4 text-base  text-gray-700 hover:bg-gray-100 hover:text-gray-700 cursor-pointer"
-        href="https://suoai.zeabur.app/"
-        target="_blank"
-      >
-        <ChatBubbleOvalLeftEllipsisIcon className="mr-3 h-5 w-5 text-gray-600 group-hover:text-gray-700" aria-hidden="true" />
-        联系我们
-      </a>
+      <div className='my-2'>
+        <a
+          className="group flex items-center font-semibold text-center rounded-md px-4 py-4 text-lg  text-gray-700 hover:bg-gray-100 hover:text-gray-700 cursor-pointer"
+          href="https://suoai.zeabur.app/"
+          target="_blank"
+        >
+          <PaperAirplaneIcon className="mr-3 h-6 w-6 text-gray-600 group-hover:text-gray-700" aria-hidden="true" />
+          联系我们
+        </a>
+      </div>
       <div className="flex flex-shrink-0 pr-4 pb-4 pl-4">
         <div className="text-gray-400 font-normal text-xs">© {copyRight} {(new Date()).getFullYear()}</div>
+        <Link href="/privacy-policy" className='text-gray-400 font-normal text-xs ml-2'>隐私政策·用户协议</Link>
       </div>
-    </div>
+    </div >
   )
 }
 

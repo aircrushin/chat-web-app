@@ -11,9 +11,9 @@ const LocaleLayout = ({
   const locale = getLocaleOnServer()
   return (
     <html lang={locale ?? 'en'} className="h-full">
-      <body className="h-full">
+      <body className="h-screen">
         <div className="overflow-x-auto">
-          <div className="w-screen h-screen min-w-[300px]">
+          <div className="w-screen h-full min-w-[300px]">
             {children}
           </div>
         </div>
